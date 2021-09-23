@@ -5,7 +5,7 @@ Creating a custom school example module using Odoo 14
 
 ##### Clone the repository from 
 ``` 
-https://github.com/jkinathan/SmartSneakers.git 
+https://github.com/jkinathan/Odoo-School-CustomModule.git 
 ```
 
 ##### Create virtual environment using 
