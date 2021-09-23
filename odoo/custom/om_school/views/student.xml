@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="student_tree" model="ir.ui.view">
+        <field name="name">school.student.tree</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="note" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="student_form" model="ir.ui.view">
+        <field name="name">school.student.form</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name" string="Name" />
+                            <field name="age"/>
+                        </group>
+                        
+                        <group>
+                            <field name="gender"/>
+                            <field name="note" />
+                        </group>
+                    </group>
+                    
+                </sheet>
+                
+            </form>
+        </field>
+    </record>
+
+
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Student!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="school_root"
+            name="School"
+            sequence="10"/>
+
+    <menuitem id="school_student_root"
+            name="Students"
+            parent="school_root"
+            sequence="10"/>
+    <menuitem id="school_student"
+            name="Students"
+            parent="school_student_root"
+            action="student_action"
+            sequence="10"/>
+</odoo>
