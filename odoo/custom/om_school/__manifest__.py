@@ -15,6 +15,7 @@ Basic Starter Custom Module for School
     'depends': [],
     'data': [
         'security/ir.model.access.csv',
+        'security/security.xml',
         'views/student.xml'
         
     ],

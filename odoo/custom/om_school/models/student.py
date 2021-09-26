@@ -16,4 +16,4 @@ class SchoolStudent(models.Model):
         
     ], required=True, default='male')
     note = fields.Text(string='Description')
-
+    company_id = fields.Many2one('res.company', string='Company', required=True, default=lambda self: self.env.company)

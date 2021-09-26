@@ -10,6 +10,7 @@
                 <field name="age"/>
                 <field name="gender"/>
                 <field name="note" />
+                <field name="company_id" groups="base.group_multi_company"/>
             </tree>
         </field>
     </record>
@@ -31,6 +32,7 @@
                         <group>
                             <field name="gender"/>
                             <field name="note" />
+                            <field name="company_id" groups="base.group_multi_company"/>
                         </group>
                     </group>
                     
